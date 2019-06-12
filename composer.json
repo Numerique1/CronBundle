@@ -1,0 +1,20 @@
+{
+  "name":         "numerique1/cron-bundle",
+  "description":  "Numerique1 cron bundle is used to manage cron tasks from symfony command",
+  "keywords":     ["cron"],
+  "type":         "symfony-bundle",
+  "license":      "MIT",
+  "authors":     [
+    {
+      "name":     "Nicolas Du",
+      "email":    "nicolas.duvollet@numerique1.fr"
+    },
+    {
+      "name":     "Stewen Ferre",
+      "email":    "stewen.ferre@numerique1.fr"
+    }
+  ],
+  "autoload": {
+    "psr-0": { "Numerique1\\Bundle\\CronBundle": "" }
+  }
+}

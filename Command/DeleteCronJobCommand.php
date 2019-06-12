@@ -17,6 +17,7 @@ class DeleteCronJobCommand extends ContainerAwareCommand
     protected function configure()
     {
         $this->setName('cron:cronjob:delete')
+        ->setDescription("Deletes an existing CronJob <info>(interactive)</info>")     
         ->setDefinition(array(
             new InputArgument('cmd', InputArgument::REQUIRED, 'The command'),
         ));

@@ -1,13 +1,32 @@
-# CronBundle
-
-## Information
 
 This bundle provides some command to operates CRUD on `CronJob` entity, which as purpose to ease CRON task management on large apps.
+
+## Installation
+In your `composer.json`
+  ```
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/Numerique1/CronBundle.git"
+        }
+    ]
+```
+Then run
+  `composer require numerique1/cron-bundle`
+## Configuration
+  #### Symfony 4
+  In your `services.yaml` :
+```
+    Numerique1\Bundle\CronBundle\Command\:
+        resource: '../vendor/numerique1/cron-bundle/Command/*'
+```
+
+***
 
 ## Good to know :
   - This bundle use PHP [DateInterval](http://php.net/manual/fr/class.dateinterval.php) for CronJob execution interval
 
-####Crontab syntax
+#### Crontab syntax
 Example of job definition:
 
 *<sup>1</sup>  *<sup>2</sup>  *<sup>3</sup>  *<sup>4</sup>  *<sup>5</sup>  __user command to be executed__
@@ -17,26 +36,28 @@ Example of job definition:
  - <sup>3</sup> day of month (1-31)
  - <sup>4</sup> month (1-12)
  - <sup>5</sup> day of week (0-6)
-## Exemples
+#### Exemples
 
 Create a `CronJob`:
 ```php
-php app/console berets:cronjob:create
+php app/console cron:cronjob:create
 ```
 List all `CronJob`:
 ```php
-php app/console berets:cronjob:list
+php app/console cron:cronjob:list
 ```
 Delete a `CronJob`:
 ```php
-php app/console berets:cronjob:delete
+php app/console cron:cronjob:delete
 ```
 
-### Execution
+#### Execution
 To execute your previously created `CronJob` you may add the execute command in your server's `crontab`:
 ```php
-5 * * * * php app/console berets:cron:run
+5 * * * * php app/console cron:cron:run
 ```
+
+***
 
 ## TODO
   * TESTS.

@@ -15,6 +15,6 @@
     }
   ],
   "autoload": {
-    "psr-0": { "Numerique1\\Bundle\\CronBundle": "" }
+    "psr-4": { "Numerique1\\Bundle\\CronBundle": "" }
   }
 }

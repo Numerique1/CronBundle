@@ -14,7 +14,9 @@ class ListCronJobCommand extends ContainerAwareCommand
 {
     protected function configure()
     {
-        $this->setName('cron:cronjob:list');
+        $this->setName('cron:cronjob:list')
+        ->setDescription("List all existing CronJob")
+        ;
     }
 
     /**

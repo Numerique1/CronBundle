@@ -15,7 +15,9 @@ class RunCronCommand extends ContainerAwareCommand
 {
     protected function configure()
     {
-        $this->setName('cron:cronjob:run');
+        $this->setName('cron:cronjob:run')
+        ->setDescription("Run all CronJob based on \$nextRun <comment>(this command must be called by your system cron manager)</comment>")
+        ;
     }
 
     protected function execute(InputInterface $input, OutputInterface $output)

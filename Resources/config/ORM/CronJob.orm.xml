@@ -4,7 +4,7 @@
                   xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping
                   http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
 
-    <entity name="Numerique1\Bundle\CronBundle\Model\CronJob" table="cron_cronjob">
+    <entity name="Numerique1\Bundle\CronBundle\Entity\CronJob" table="cron_cronjob">
         <unique-constraints>
             <unique-constraint name="command_idx" columns="command" />
         </unique-constraints>
@@ -15,7 +15,7 @@
         <field name="command" column="command" type="string"/>
         <field name="runInterval" column="run_interval" type="string"/>
         <field name="runAt" column="run_at" type="string" length="8"/>
-        <field name="runNext" column="run_next" type="datetime"/>
+        <field name="nextRun" column="run_next" type="datetime"/>
         <field name="lastRun" column="last_run" type="datetime" nullable="true"/>
         <field name="lastSuccess" column="last_success" type="datetime" nullable="true"/>
         <field name="lockInterval" column="lock_interval" type="string" nullable="false"/>

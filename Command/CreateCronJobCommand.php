@@ -16,7 +16,9 @@ class CreateCronJobCommand extends ContainerAwareCommand
 {
     protected function configure()
     {
-        $this->setName('cron:cronjob:create');
+        $this->setName('cron:cronjob:create')
+        ->setDescription("Creates a new CronJob <info>(interactive)</info>")    
+        ;
     }
 
     protected function execute(InputInterface $input, OutputInterface $output)
